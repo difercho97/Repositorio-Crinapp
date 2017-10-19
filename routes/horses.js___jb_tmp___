@@ -1,0 +1,13 @@
+var express = require('express');
+var db = require('../database')
+var router = express.Router();
+
+/* GET horse listing. */
+router.get('/', function(req, res, next) {
+
+  db.getHorses(function (err, results) {
+      
+  })
+});
+
+module.exports = router;

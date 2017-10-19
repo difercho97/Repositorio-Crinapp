@@ -1,0 +1,34 @@
+angular.module('app', ['ngRoute', 'ngResource'])
+
+
+    .factory('Horses', ['$resource', function($resource){
+        return $resource('/horses/:id', {'id': '@registro_equino'}, {
+            'query': { method: 'GET', isArray: true}
+        });
+    }])
+    .controller('HorseController', ['$scope', 'Horses', function ($scope, Horses) {
+        $scope.horses = Horses.query();
+
+        console.log($scope.horses);
+        $scope.getHorseId = function (horse) {
+            return horse.registro_equino;
+        }
+    }])
+
+    .controller('HorseDetailCtrl', ['$scope', '$routeParams', 'Horses', function ($scope, $routeParams, Horses) {
+        $scope.horse = Horses[$routeParams.id];
+        console.log($routeParams.id);
+    }])
+
+    .config(['$routeProvider', function ($routeProvider) {
+        $routeProvider
+            .when('/', {
+                templateUrl: '/horses.html',
+                controller: 'HorseController'
+            })
+
+            .when('/:id', {
+                templateUrl: '/horseDetail.html',
+                controller: 'HorseDetailCtrl'
+            });
+    }]);

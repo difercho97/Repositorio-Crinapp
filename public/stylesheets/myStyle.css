@@ -1,0 +1,77 @@
+
+.profilePictureCard > .mdl-card__title {
+    color: #fff;
+    height: 200px;
+    background: url('../images/horse1.jpg') center / cover ;
+    overflow: hidden;
+}
+.profilePictureCard > .mdl-card__menu {
+    color: #fff;
+}
+
+.myNav{
+    padding: 0 !important;
+}
+
+.myNavCard{
+    padding: 0 !important;
+}
+
+.myNavLink{
+    padding: 20px !important;
+}
+
+.myIconNavLink{
+    padding-right: 24px !important;
+}
+
+.horseHomeImageContainer{
+    max-width: 100% !important;
+}
+
+.grow { transition: all .1s ease-in-out; }
+.grow:hover { transform: scale(1.02); }
+
+.horse-card-image.mdl-card {
+    height: 320px;
+    text-decoration: none;
+}
+
+.horse-card-image:hover{
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2);
+    cursor: pointer;
+
+}
+.horse-card-image > .mdl-card__actions {
+    height: 52px;
+    padding: 16px;
+    background: rgba(0, 0, 0, 0.2);
+}
+.horse-card-image__filename {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.horse-card-image > .mdl-card__menu {
+    color: #fff;
+
+}
+
+.delete-horse-li{
+    color: red;
+}
+
+.mdl-button--floating-action {
+    position: fixed;
+    right: 40px;
+    bottom: 20px;
+    z-index: 2000;
+}
+
+
+.myHorseDetailContainer{
+    padding: 20px !important;
+}
+
